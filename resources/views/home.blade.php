@@ -157,8 +157,8 @@
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Service</h1>
                 <h1 class="position-absolute text-uppercase text-primary">My Services</h1>
             </div>
-            @foreach ($services as $service)
             <div class="row pb-3">
+            @foreach ($services as $service)
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="{{ $service->icon }} service-icon bg-primary text-white mr-3"></i>
@@ -221,8 +221,8 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    @foreach ($reviewers as $review)
                     <div class="owl-carousel testimonial-carousel">
+                        @foreach ($reviewers as $review)
                         <div class="text-center">
                             <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
                             <h4 class="font-weight-light mb-4">{{ $review->description }}</h4>
