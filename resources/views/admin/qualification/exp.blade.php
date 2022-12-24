@@ -31,7 +31,7 @@
                               <td>
                                 {{ $experience -> association }} 
                               </td>
-                              <td>  {{ $experience -> description }}  </td>
+                              <td>  {{ substr($experience -> description,0,20) }}  </td>
                               <td>  {{ $experience -> from }} - {{ $experience -> to }}   </td>
                               <td> 
                                 <a href="{{ route('admin.qualification.edit', $experience->id) }}">
