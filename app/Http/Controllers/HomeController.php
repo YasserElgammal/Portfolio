@@ -33,17 +33,17 @@ class HomeController extends Controller
             'birth_day',
             'experience')->where('id',1)->first();
 
-        $experiences = Qualification::where('type',['Work'])->orderBy('id')->get();
-        $educations = Qualification::where('type',['Education'])->orderBy('id')->get();
+        $experiences = Qualification::where('type',['Work'])->orderBy('id')->latest()->take(3)->get();
+        $educations = Qualification::where('type',['Education'])->orderBy('id')->latest()->take(3)->get();
         
-        $skills = Skill::all();
+        $skills = Skill::latest()->take(6)->get();
         
-        $services = Service::all();
+        $services = Service::take(6)->get();
 
         $categories = Category::all();
-        $reviewers = Review::all();
+        $reviewers = Review::latest()->take(5)->get();
 
-        $portfolios= Portfolio::with('category')->get();   
+        $portfolios= Portfolio::with('category')->latest()->take(6)->get();  
         
         $setting = Setting::first();
 
