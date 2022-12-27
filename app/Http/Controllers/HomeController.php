@@ -33,8 +33,8 @@ class HomeController extends Controller
             'birth_day',
             'experience')->where('id',1)->first();
 
-        $experiences = Qualification::where('type',['Work'])->orderBy('id')->latest()->take(3)->get();
-        $educations = Qualification::where('type',['Education'])->orderBy('id')->latest()->take(3)->get();
+        $experiences = Qualification::where('type',['Work'])->latest()->take(3)->get();
+        $educations = Qualification::where('type',['Education'])->latest()->take(3)->get();
         
         $skills = Skill::latest()->take(6)->get();
         

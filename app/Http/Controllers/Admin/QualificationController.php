@@ -46,12 +46,7 @@ class QualificationController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
-     *            $table->enum('type',['Education','Work']);
-            $table->string('title');
-            $table->string('association');
-            $table->string('description');
-            $table->string('from');
-            $table->string('to');
+     *     
      */
     public function store(Request $request)
     {
