@@ -50,7 +50,7 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="form-group row">
+            <div class="form-group row">
                 <label class="col-sm-3 col-form-label">End</label>
                 <div class="col-sm-9">
                   <input type="text" name="to" class="form-control" value="{{old('to')}}" required/>

@@ -30,9 +30,6 @@ use Illuminate\Support\Facades\Route;
 // Front-End Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact');
-// Route::get('/contact', function(){
-//         Mail::to("zz@xx.com")->send(new ContactMail());
-
 
 //Admin Panel
 Route::middleware(['auth','isAdmin'])->name('admin.')->prefix('/admin')->group(function(){
