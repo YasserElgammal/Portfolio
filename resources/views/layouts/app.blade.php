@@ -15,7 +15,7 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
@@ -64,13 +64,13 @@
        <script src="{{ asset('import/assets/lib/owlcarousel/owl.carousel.min.js') }}"></script>
        <script src="{{ asset('import/assets/lib/isotope/isotope.pkgd.min.js') }}"></script>
        <script src="{{ asset('import/assets/lib/lightbox/js/lightbox.min.js') }}"></script>
-   
+
        <!-- Contact Javascript File -->
        <script src="{{ asset('mail/jqBootstrapValidation.min.js') }}"></script>
        <script src="{{ asset('import/assets/mail/contact.js') }}"></script>
-   
+
        <!-- Template Javascript -->
        <script src="{{ asset('import/assets/js/main.js') }}"></script>
    </body>
-   
+
    </html>

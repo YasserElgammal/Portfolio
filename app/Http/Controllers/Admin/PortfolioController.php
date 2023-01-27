@@ -17,8 +17,7 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        $portfolios= Portfolio::with('category')->get();     
-        // dd($portfilios);
+        $portfolios= Portfolio::with('category')->get();
         return view('admin.portfolio.index',compact('portfolios'));
     }
 
@@ -122,12 +121,12 @@ class PortfolioController extends Controller
     public function search(Request $request)
     {
         $searchedItem = $request->input('search');
-        
+
         $portfolios = Portfolio::query()
         ->where('title', 'LIKE', "%{$searchedItem}%")
         ->orWhere('project_url', 'LIKE', "%{$searchedItem}%")
         ->get();
-        
+
 
     // Return the search view with the resluts compacted
     return view('admin.portfolio.search', compact('portfolios'));

@@ -50,8 +50,7 @@ class AboutmeController extends Controller
         $get_new_file = $request->file('image')->store('images');
         $user->profile_pic = $get_new_file;
     }
-    // $user->job = $request->job;
-    // $user->birth_day = $request->birth_day;
+
     $user->update($validated);
 
     return to_route('admin.aboutme.index')->with('message','Data Updated');

@@ -21,6 +21,6 @@ class ContactController extends Controller
         Mail::to($contact_email->contact_mail)->send(new ContactMail($request->name, $request->email, $request->subject_mail, $request->content));
         // Mail::to('hjhj@nn.com')->send(new ContactMail($request->name, $request->email, $request->subject_mail, $request->content));
         // Mail::to("zz@xx.com")->send(new ContactMail('nnn','e@z.com','bla bla','bla bla bla bla'));
-        return to_route('home')->with('message','Message sent suceesfully !');
+        return to_route('home')->with('message','Message sent sucessfully !');
     }
 }
