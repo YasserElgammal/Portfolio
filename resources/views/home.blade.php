@@ -9,7 +9,7 @@
                 <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
-                    </button>        
+                    </button>
                     <!-- 16:9 aspect ratio -->
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
@@ -26,13 +26,13 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="{{ asset("storage/$user->profile_pic") }}" alt="">
+                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="{{ asset("storage/$user?->profile_pic") }}" alt="">
                 </div>
                 <div class="col-lg-7 text-center text-lg-left">
                     <h3 class="text-white font-weight-normal mb-3">I'm</h3>
-                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">{{ $user->name }}</h1>
+                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">{{ $user?->name }}</h1>
                     <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
-                    <div class="typed-text d-none">{{ $user->job }}</div>
+                    <div class="typed-text d-none">{{ $user?->job }}</div>
                     <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
                         <a href="{{ $setting->cv_url }}" class="btn btn-outline-light mr-5">Download CV</a>
                         <button type="button" class="btn-play" data-toggle="modal"
@@ -63,13 +63,13 @@
                     <h3 class="mb-4">{{ $setting->about_title }}</h3>
                     <p>{{ $setting->about_description }}</p>
                     <div class="row mb-3">
-                        <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">{{ $user->name }}</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Birthday: <span class="text-secondary">{{ $user->birth_day }}</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Degree: <span class="text-secondary">{{ $user->degree }}</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Experience: <span class="text-secondary">{{ $user->experience }} Years</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Phone: <span class="text-secondary">{{ $user->phone }}</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">{{ $user->email }}</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">{{ $user->address }}</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">{{ $user?->name }}</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Birthday: <span class="text-secondary">{{ $user?->birth_day }}</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Degree: <span class="text-secondary">{{ $user?->degree }}</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Experience: <span class="text-secondary">{{ $user?->experience }} Years</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Phone: <span class="text-secondary">{{ $user?->phone }}</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">{{ $user?->email }}</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">{{ $user?->address }}</span></h6></div>
                         <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-secondary">Available</span></h6></div>
                     </div>
                     <a href="{{ $setting->freelance_url }}" class="btn btn-outline-primary mr-4">Hire Me</a>
@@ -92,7 +92,7 @@
                 <div class="col-lg-6">
                     <h3 class="mb-4">My Education</h3>
                     <div class="border-left border-primary pt-2 pl-4 ml-2">
-                        @foreach ($educations as $education)      
+                        @foreach ($educations as $education)
                         <div class="position-relative mb-4">
                             <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">{{ $education->title }}</h5>
@@ -111,7 +111,7 @@
                             <h5 class="font-weight-bold mb-1">{{ $experience->title }}</h5>
                             <p class="mb-2"><strong>{{ $experience->association }}</strong> | <small>{{ $experience->from }} - {{ $experience->to }}</small></p>
                             <p>{{ $experience->description }}</p>
-                        </div>              
+                        </div>
                         @endforeach
                     </div>
                 </div>
@@ -165,7 +165,7 @@
                         <h4 class="font-weight-bold m-0">{{ $service->name }}</h4>
                     </div>
                     <p>{{ $service->description }}</p>
-                </div>          
+                </div>
             @endforeach
             </div>
         </div>
@@ -204,7 +204,7 @@
                             </a>
                         </div>
                     </div>
-                </div>    
+                </div>
                 @endforeach
             </div>
         </div>
@@ -229,7 +229,7 @@
                             <img class="img-fluid rounded-circle mx-auto mb-3" src="{{ asset("storage/$review->image") }}" style="width: 80px; height: 80px;">
                             <h5 class="font-weight-bold m-0">{{ $review->name }} </h5>
                             <span>{{ $review->job }}</span>
-                        </div>            
+                        </div>
                     @endforeach
                     </div>
                 </div>
