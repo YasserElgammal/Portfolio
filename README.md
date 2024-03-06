@@ -14,8 +14,8 @@ This is a Portfolio landing page built with Laravel, It has a full control panel
 7. Start the project by running `php artisan serve`
 
 ### Demo Account
-AdminURL: http://127.0.0.1:8000/admin
-Email: test@example.com
-Password: password
+- AdminURL: http://127.0.0.1:8000/admin
+- Email: test@example.com
+- Password: password
 
 
