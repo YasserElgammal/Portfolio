@@ -37,7 +37,7 @@ class HomeController extends Controller
         $educations = Qualification::where('type',['Education'])->orderBy('id', 'desc')->take(3)->get();
 
         $skills = Skill::orderBy('id', 'desc')->take(6)->get();
-
+        // dd($skills);
         $services = Service::take(6)->get();
 
         $categories = Category::all();

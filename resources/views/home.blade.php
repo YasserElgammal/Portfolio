@@ -129,7 +129,7 @@
                 <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
             </div>
             <div class="row align-items-center">
-                @foreach($skills->split($skills->count()/3) as $row)
+                @foreach($skills->split(ceil($skills->count()/3) ) as $row)
                 <div class="col-md-6">
                     @foreach($row as $skill)
                     <div class="skill mb-4">
